@@ -1,7 +1,7 @@
 # Class baculaweb::params
 #
 # This class contains every parameter which will be used in this puppet module
-# for setting up the baculaweb agent
+# for setting up the baculaweb agent on a server
 class baculaweb::params {
   $pkg_name         = 'bacula-web'
   $rootdir          = '/var/www/bacula-web'

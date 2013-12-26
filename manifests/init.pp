@@ -24,8 +24,6 @@ class baculaweb (
   include ::baculaweb::install
   include ::baculaweb::config
 
-  motd::register{'bacula-web': }
-
   Class['::baculaweb::install'] ->
   Class['::baculaweb::config']
 }

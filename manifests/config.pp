@@ -9,9 +9,11 @@ class baculaweb::config {
     mode    => '0555',
     require => Package[$baculaweb::webserver],
   }
+
   file { "${baculaweb::rootdir}/application/view/cache":
     mode    => '0755',
   }
+
   file { "${baculaweb::rootdir}/application/config/config.php":
     path    => "${baculaweb::rootdir}/application/config/config.php",
     content => template('baculaweb/config.php.erb'),
