@@ -1,3 +1,5 @@
+# puppet-baculaweb. [![Build Status](https://travis-ci.org/visibilityspots/puppet-baculaweb.svg?branch=master)](https://travis-ci.org/visibilityspots/puppet-baculaweb)
+
 Deploying a bacula-web interface from bacula-web.org.
 
 Supported CentOS 6 x86
@@ -6,8 +8,9 @@ I packaged the bacula-web software in an rpm package which is available on http:
 
 You can use for example https://github.com/vStone/puppet-apache to set configure an apache webserver.
 
-Example for node.pp manifest:
+## example for node.pp manifest:
 
+```puppet
 node 'HOSTNAME' {
   yumrepo { 'Visibilityspots':
     baseurl  => 'http://repository.visibilityspots.com',
@@ -20,9 +23,13 @@ node 'HOSTNAME' {
       dbpass   => 'THE PASSWORD OF YOUR BACULA MYSQL USER';
   }
 }
+```
 
-By default those parameters will be used according to the params class but you can override them in your nodes manifest:
+## default params
 
+those parameters will be used according to the params class but you can override them in your nodes manifest:
+
+```puppet
   $pkg_name         = 'bacula-web'
   $rootdir          = '/var/www/bacula-web'
   $user             = 'apache'
@@ -39,5 +46,6 @@ By default those parameters will be used according to the params class but you c
   $dbname           = 'bacula'
   $dbtype           = 'mysql'
   $dbport           = '3306'
+```
 
 Feel free to report issue's or comments.
