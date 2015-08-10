@@ -1,0 +1,8 @@
+name    	'puppet-baculaweb'
+version 	'1.0.0'
+source 		'Github'
+author 		'Jan Collijs'
+license 	'GPL'
+summary 	'This module manages a baculaweb server'
+description 	'Using this module the baculaweb server will be maintained'
+project_page 	'https://github.com/visibilityspots/puppet-baculaweb'

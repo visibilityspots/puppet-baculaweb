@@ -1,0 +1,23 @@
+sudo: false
+
+before_install:
+  - ln -s . baculaweb
+
+cache:
+  - apt
+  - bundler
+
+addons:
+  apt:
+    packages:
+    - rpm
+
+rvm:
+  - 1.9.3
+
+script:
+  - curl -s https://raw.githubusercontent.com/visibilityspots/ci-scripts/master/travis/puppet-module.sh | bash -s baculaweb development true
+
+notifications:
+  email:
+    - travis@visibilityspots.com
